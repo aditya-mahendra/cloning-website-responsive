@@ -3,10 +3,11 @@
     padding: 0;
 }
 html,body{
-    background: #FFFFFF;
+    background-color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-   
+    
+    
     
 }
 
@@ -17,6 +18,7 @@ html,body{
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    
 
   
 
@@ -161,14 +163,13 @@ html,body{
 
 nav {
     background: white;
+    z-index: 999;
 } 
 
 .navbar-toggler {
-    background: #4a7cd8;
+    background: white;
     color: #FFFFFF;
 }
-
-
 
 .fa-paper-plane {
     margin-left: 10px;
@@ -192,16 +193,21 @@ nav {
 
 //fn-header//@at-root
 
+.fn-hero {
+    background-image: linear-gradient(white 37%,#E2ECFF 100%,);
+}
+
 .fn-hero-main {
     width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
     height: 1500px;
-    margin-top: -250px;
-    background-image: linear-gradient(white 37%,#E2ECFF 100%,white 150%);
+    margin-top: -400px;
+   
     .fn-hero-left{
         margin-top: 170px;
         max-width: 50%;
@@ -243,12 +249,13 @@ nav {
             color: #FFFFFF;
             margin-top: 50px;
             letter-spacing: 1px;
-            animation: animasi 2s steps(70, end) ;
-            overflow: hidden;
+            
            &:hover{
             background: #fd6039;
             box-shadow: -6px -6px 6px rgba(242, 182, 182,0.75),
                          6px 6px 6px rgba(242, 182, 182,0.75);
+            transform: rotateX(100%);
+         
             
            }
         } 
@@ -287,7 +294,7 @@ nav {
 
        .fn-hero-image{
             width:100% ;
-            box-shadow: 25px 25px  #f18469;;
+            box-shadow: 25px 25px  #f18469;
             z-index: 999;
             position: relative;
         }
@@ -298,7 +305,7 @@ nav {
         & {
             width: 100%;
             max-width: 100%;
-            margin-top: -80px;
+            margin-top: -140px;
            
         }
         & .fn-hero-left {
@@ -308,9 +315,11 @@ nav {
             text-align: center;
 
             .fn-hero-title{
-            font-size: 32px;
+            font-size: 40px;
             line-height: 1.3em;
             margin-bottom: 12px;
+            width: 100%;
+            
             }
         }
 
@@ -329,8 +338,7 @@ nav {
              }
 
             .fn-hero-images {
-              
-                left: 570px;
+                left:460px;
                 top:-45px;
                 width: 20%;
     
@@ -343,6 +351,7 @@ nav {
             margin-top: 0px;
             width: 100%;
             max-width: 100%;
+            margin-top: -200px;
         }
         & .fn-hero-left {
             width: 100%;
@@ -350,7 +359,7 @@ nav {
             margin-top: 150px;
 
             .fn-hero-title{
-                font-size: 23px;
+                font-size: 40px;
                 line-height: 1.3em;
                 margin-bottom: 12px;
             }
@@ -359,6 +368,21 @@ nav {
         & .fn-hero-right {
             width: 100%;
             max-width: 100%;
+            margin-top: -150px;
+
+            .fn-trigle {
+                left: -50px;
+                top: 450px;
+                width: 35%;
+                width: 25%;
+            }
+
+           .fn-hero-images {
+               left: 374px;
+               top:-45px;
+               width: 20%;
+   
+           }
         }
     }
 }
@@ -379,11 +403,12 @@ nav {
         max-width: 30%;
         width: 30%;
         display: flex;
-        border: 1px solid rgb(247, 245, 245);
         height: 165px;
         padding: 20px;
         box-sizing: border-box;
         background-color: white;
+        box-shadow: -1px -1px 1px rgb(209, 200, 200,.75),
+        1px 1px 1px rgb(209, 200, 200,.75);
 
     .fn-images {
         margin-right: 20px;
@@ -413,12 +438,13 @@ nav {
         max-width: 30%;
         width: 30%;
         display: flex;
-        border: 1px solid rgb(247, 245, 245);
         height: 165px;
         padding: 20px;
         box-sizing: border-box;
         background-color: white;
         margin: 0 20px;
+        box-shadow: -1px -1px 1px rgb(209, 200, 200,.75),
+        1px 1px 1px rgb(209, 200, 200,.75);
       
 
         .fn-images-profesional {
@@ -449,19 +475,20 @@ nav {
     max-width: 30%;
         width: 30%;
         display: flex;
-        border: 1px solid rgb(247, 245, 245);
         height: 165px;
         padding: 20px;
         box-sizing: border-box;
         background-color: white;
+        box-shadow: -1px -1px 1px rgb(209, 200, 200,.75),
+        1px 1px 1px rgb(209, 200, 200,.75);
 
     &:hover{
         background: #F7F6F6;
         
        } 
 
-       .fn-images-trasparent {
-        margin-right: 20px;
+    .fn-images-trasparent {
+    margin-right: 20px;
     } 
     
     .fn-trasparent-main {
@@ -491,13 +518,15 @@ nav {
         flex-direction: column;
         margin: 0;
         margin-top: -100px;
+
+       
        
     } 
     
     & .fn-service-satu {
-        max-width:90%;
-        width: 90%;
-        height: 90%;
+        max-width:100%;
+        width: 100%;
+        height: 100%;
         margin: 0;
         flex-direction: column;
         justify-content: center;
@@ -508,17 +537,20 @@ nav {
         box-sizing: border-box;
      
         .fn-images {
-            margin-right: 20px;
+            margin-right: 10px;
+            margin-top: -20px;
+            margin-left: 20px;
+           
         } 
         
         .fn-Advice {
             width: 100%;
-            height: 72px;
             .fn-fully-title {
             font-family: "Poppins", Sans-serif;
             font-size: 16px;
             font-weight: 600;
             line-height: 1.2em;
+            margin-top: 20px;
             }
             .fn-fully-desc {
                 font-family: "Poppins", Sans-serif;
@@ -533,35 +565,82 @@ nav {
         
     }
     & .fn-service-dua {
-        max-width:90%;
-        width: 90%;
+        max-width:100%;
+        width: 100%;
+        height: 100%;
         margin: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 40px;
+        box-sizing: border-box;
         
 
-        .fn-financial-title {
+        .fn-images-profesional {
+            margin-right: 10px;
+            margin-top: -20px;
+            margin-left: 20px;
+        } 
+        
+        .fn-profesional-main {
+            width: 100%;
+            .fn-profesional-title {
+            font-family: "Poppins", Sans-serif;
             font-size: 16px;
-            line-height: 1.3em;
-        }
-
-        .fn-financial-desc {
-            font-size: 14px;
+            font-weight: 600;
             line-height: 1.2em;
-          }
+            margin-top: 20px;
+            }
+            .fn-profesional-desc {
+            font-family: "Poppins", Sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.2em; 
+            color: #7A7A7A;
+            margin-top: 25px; 
+            }
+        }
     }
 
     & .fn-service-tiga {
-        max-width: 90%;
-        width: 90%;
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 40px;
+            box-sizing: border-box;
        
-        .fn-loan-title {
+        .fn-images-trasparent {
+            margin-right: 10px;
+            margin-top: -20px;
+            margin-left: 20px;
+        } 
+        
+        .fn-trasparent-main {
+            width: 100%;
+            .fn-trasparent-title {
+            font-family: "Poppins", Sans-serif;
             font-size: 16px;
-            line-height: 1.3em;
-        }
-
-        .fn-loan-desc {
-            font-size: 14px;
+            font-weight: 600;
             line-height: 1.2em;
-          }
+            margin-top: 20px;
+            }
+            .fn-trasparent-desc {
+            font-family: "Poppins", Sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.2em; 
+            color: #7A7A7A;
+            margin-top: 25px; 
+            }
+        }
     }
       
   }
@@ -570,47 +649,51 @@ nav {
     &{
         flex-direction: column;
         margin: 0;
+        margin-top: -100px;
        
     }
     & .fn-service-satu {
-        width: 90%;
-        max-width: 90%;
+        width: 100%;
+        max-width: 100%;
         margin-bottom: 20px;
 
-        .fn-servis-title {
-         font-size: 25px;
-      }   
+        .fn-Advice {
+            width: 100;
+             max-width: 100%;
+
+            .fn-fully-desc {
+                font-size: 14px;
+                
+            }
+        }
+       
 
     }
 
     & .fn-service-dua {
-        width: 90%;
-        max-width: 90%;
+        width: 100%;
+        max-width: 100%;
         margin-bottom: 20px;
 
-        .fn-financial-title {
-            font-size: 25px;
-         }  
-
-        .fn-financial-desc {
-        line-height: 1.2em;
-          
-     }
+    .fn-profesional-main {
+        width: 100%;
+        .fn-profesional-desc {
+        font-size: 14px;
+            }
+        }
       
     }
 
     & .fn-service-tiga {
-        width: 90%;
-        max-width: 90%; 
+        width: 100%;
+        max-width: 100%; 
 
-        .fn-loan-title {
-            font-size: 25px;
-         }  
-        
-        .fn-loan-desc {
-            line-height: 1.2em;
-              
-         }
+        .fn-trasparent-main {
+        width: 100%;
+        .fn-trasparent-desc {
+        font-size: 14px;
+        }
+      }
     }
       
   }
@@ -619,7 +702,7 @@ nav {
 .fn-services-main {
     width: 100%;
     max-width: 100%;
-    position: relative;
+    margin-top: -50px;
     
 }
 
@@ -651,5 +734,1756 @@ nav {
     margin-top: 20px; 
 }
 
+  @media screen and (max-width:768px){
+      & {
+          width: 100%;
+          max-width: 100%;
+          margin-top: 200px;
+      }
+  }
+
+  @media screen and (max-width:578px){
+    & {
+        width: 100%;
+        max-width: 100%;
+        margin-top: -6000px;
+
+
+        .fn-services-desc {
+            font-family: "Poppins", Sans-serif;  
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5em;
+            color: #333;
+            margin-top: 20px; 
+        }
+
+        .fn-services-title {
+            font-size: 35px;
+            font-weight: 600;
+            line-height: 1.2em;
+          }
+        
+    }
+
+}
+
+}
+
+//fn-financial-planning/@at-root
+ 
+ .fn-financial-main {
+     display: flex;
+     margin-top: 0px;
+     margin-top: -10px;
+
+     
+
+     .fn-planning-satu {
+         width: 33%;
+         max-width: 33%;
+         display: flex;
+         padding: 20px;
+         box-sizing: border-box;
+         height: 212px;
+         border-top: 5px solid #2D487C;
+         border-bottom: 1px solid silver;
+         border-left: 1px solid silver;
+         border-right: 1px solid silver;
+
+
+         .fn-images-palnning {
+         margin-right: 20px;
+         }
+
+         .fn-planing-main {
+           width: 65%;
+         }
+
+         .fn-financial-title {
+            color: #000000;
+            font-family: "Poppins", Sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.3em;
+        
+         }
+
+         .fn-financial-desc {
+            color: #7a7a7a;
+            font-family: "Poppins", Sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5em;
+            margin-top: 20px;
+         }
+
+         .fn-financial-buton {
+            color: #2D487C;
+            font-family: "Poppins", Sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.5em;
+            margin-top: 30px;
+
+           
+
+            a{
+                text-decoration: none;
+                color: #2D487C;
+                margin-right: 20px;
+               
+                .fa-arrow-right{
+                    margin-left: 10px;
+                }
+
+                &:hover{
+                    color: #E98970;
+                }
+            }
+         }
+
+        
+     }
+
+     .fn-planning-dua {
+        width: 33%;
+        max-width: 33%;
+        display: flex;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 212px;
+        border-top: 5px solid #2D487C;
+        border-bottom: 1px solid silver;
+        border-left: 1px solid silver;
+        border-right: 1px solid silver;
+        margin: 0 20px;
+
+    .fn-images-Audit {
+        margin-right: 20px;
+        }
+
+    .fn-Audit-main {
+        width: 65%;
+    }
+
+    .fn-Audit-title {
+        color: #000000;
+        font-family: "Poppins", Sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.3em;
+    
+    }
+
+    .fn-Audit-desc {
+        color: #7a7a7a;
+        font-family: "Poppins", Sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5em;
+        margin-top: 20px;
+    }
+
+    .fn-Audit-buton {
+        color: #2D487C;
+        font-family: "Poppins", Sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.5em;
+        margin-top: 30px;
+        
+         a{
+                text-decoration: none;
+                color: #2D487C;
+                margin-right: 20px;
+               
+                .fa-arrow-right{
+                    margin-left: 10px;
+                }
+
+                &:hover{
+                    color: #E98970;
+                }
+            }
+    }
+    }
+
+     .fn-planning-tiga {
+        width: 33%;
+        max-width: 33%;  
+        display: flex;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 212px;
+        border-top: 5px solid #2D487C;
+        border-bottom: 1px solid silver;
+        border-left: 1px solid silver;
+        border-right: 1px solid silver;
+
+        .fn-images-Asurance {
+            margin-right: 20px;
+            }
+    
+        .fn-Asurance-main {
+            width: 65%;
+        }
+    
+        .fn-Asurance-title {
+            color: #000000;
+            font-family: "Poppins", Sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.3em;
+        
+        }
+    
+        .fn-Asurance-desc {
+            color: #7a7a7a;
+            font-family: "Poppins", Sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5em;
+            margin-top: 20px;
+        }
+    
+        .fn-Asurance-buton {
+            color: #2D487C;
+            font-family: "Poppins", Sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.5em;
+            margin-top: 30px;
+
+            a{
+                text-decoration: none;
+                color: #2D487C;
+                margin-right: 20px;
+               
+                .fa-arrow-right{
+                    margin-left: 10px;
+                }
+
+                &:hover{
+                    color: #E98970;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:768px) {
+       & {
+           flex-direction: column;
+       }
+
+       &  .fn-planning-satu {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 20px;
+        height: 250px;
+        box-sizing: border-box;
+
+
+        .fn-images-palnning {
+        margin-right: 20px;
+        }
+
+        .fn-planing-main {
+          width: 100%;
+        }
+
+        .fn-financial-title {
+          margin-top: 20px;
+       
+        }
+
+        .fn-financial-desc {
+           margin-top: 25px;
+        }
+
+        .fn-financial-buton {
+           margin-top: 35px;
+
+        }
+
+       
+    }
+
+    &  .fn-planning-dua {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 20px;
+        height: 250px;
+        box-sizing: border-box;
+   
+    .fn-Audit-main {
+        width: 100%;
+    }
+
+    .fn-Audit-title {
+        margin-top: 20px;
+    
+    }
+
+    .fn-Audit-desc {
+        margin-top: 25px;
+    }
+
+    .fn-Audit-buton {
+        margin-top: 35px;
+    
+            }
+    
+    }
+
+    &  .fn-planning-tiga {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        padding: 20px;
+        height: 250px;
+        box-sizing: border-box;
+        
+        .fn-Asurance-main {
+        width: 100%;
+        }
+
+        .fn-Asurance-title {
+         margin-top: 20px;
+        
+        }
+
+        .fn-Asurance-desc {
+         margin-top: 25px;
+        }
+
+        .fn-Asurance-buton {
+         margin-top: 35px;
+
+        }
+    
+        
+    }
+
+    }
+
+    
+    @media screen and (max-width:578px) {
+        & {
+            flex-direction: column;
+        }
+ 
+        &  .fn-planning-satu {
+         width: 100%;
+         max-width: 100%;
+         display: flex;
+         flex-direction: column;
+         padding: 20px;
+         margin-bottom: 20px;
+         height: 270px;
+         box-sizing: border-box;
+ 
+ 
+         .fn-images-palnning {
+         margin-right: 20px;
+         }
+ 
+         .fn-planing-main {
+           width: 100%;
+         }
+ 
+         .fn-financial-title {
+           margin-top: 20px;
+        
+         }
+ 
+         .fn-financial-desc {
+            margin-top: 25px;
+         }
+ 
+         .fn-financial-buton {
+            margin-top: 35px;
+ 
+         }
+ 
+        
+     }
+ 
+     &  .fn-planning-dua {
+         width: 100%;
+         max-width: 100%;
+         margin: 0;
+         flex-direction: column;
+         padding: 20px;
+         margin-bottom: 20px;
+         height: 270px;
+         box-sizing: border-box;
+    
+     .fn-Audit-main {
+         width: 100%;
+     }
+ 
+     .fn-Audit-title {
+         margin-top: 20px;
+     
+     }
+ 
+     .fn-Audit-desc {
+         margin-top: 25px;
+     }
+ 
+     .fn-Audit-buton {
+         margin-top: 25px;
+     
+             }
+     
+     }
+ 
+     &  .fn-planning-tiga {
+         width: 100%;
+         max-width: 100%;
+         flex-direction: column;
+         padding: 20px;
+         height: 270px;
+         box-sizing: border-box;
+         
+         .fn-Asurance-main {
+         width: 100%;
+         }
+ 
+         .fn-Asurance-title {
+          margin-top: 20px;
+         
+         }
+ 
+         .fn-Asurance-desc {
+          margin-top: 25px;
+         }
+ 
+         .fn-Asurance-buton {
+          margin-top: 25px;
+ 
+         }
+     
+         
+     }
+ 
+     }
+ }
+
+ //fn-financial-main/
+
+ .fn-container-main {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 300px;
+
+    
+
+    .fn-planning-satu {
+        width: 33%;
+        max-width: 33%;
+        display: flex;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 212px;
+        border-top: 5px solid #2D487C;
+        border-bottom: 1px solid silver;
+        border-left: 1px solid silver;
+        border-right: 1px solid silver;
+
+
+        .fn-images-palnning {
+        margin-right: 20px;
+        }
+
+        .fn-planing-main {
+          width: 65%;
+        }
+
+        .fn-financial-title {
+           color: #000000;
+           font-family: "Poppins", Sans-serif;
+           font-size: 16px;
+           font-weight: 600;
+           line-height: 1.3em;
+       
+        }
+
+        .fn-financial-desc {
+           color: #7a7a7a;
+           font-family: "Poppins", Sans-serif;
+           font-size: 14px;
+           font-weight: 400;
+           line-height: 1.5em;
+           margin-top: 20px;
+        }
+
+        .fn-financial-buton {
+           color: #2D487C;
+           font-family: "Poppins", Sans-serif;
+           font-size: 15px;
+           font-weight: 500;
+           line-height: 1.5em;
+           margin-top: 30px;
+
+          
+
+           a{
+               text-decoration: none;
+               color: #2D487C;
+               margin-right: 20px;
+              
+               .fa-arrow-right{
+                   margin-left: 10px;
+               }
+
+               &:hover{
+                   color: #E98970;
+               }
+           }
+        }
+
+       
+    }
+
+    .fn-planning-dua {
+       width: 33%;
+       max-width: 33%;
+       display: flex;
+       padding: 20px;
+       box-sizing: border-box;
+       height: 212px;
+       border-top: 5px solid #2D487C;
+       border-bottom: 1px solid silver;
+       border-left: 1px solid silver;
+       border-right: 1px solid silver;
+       margin: 0 20px;
+
+   .fn-images-Audit {
+       margin-right: 20px;
+       }
+
+   .fn-Audit-main {
+       width: 65%;
+   }
+
+   .fn-Audit-title {
+       color: #000000;
+       font-family: "Poppins", Sans-serif;
+       font-size: 16px;
+       font-weight: 600;
+       line-height: 1.3em;
+   
+   }
+
+   .fn-Audit-desc {
+       color: #7a7a7a;
+       font-family: "Poppins", Sans-serif;
+       font-size: 14px;
+       font-weight: 400;
+       line-height: 1.5em;
+       margin-top: 20px;
+   }
+
+   .fn-Audit-buton {
+       color: #2D487C;
+       font-family: "Poppins", Sans-serif;
+       font-size: 15px;
+       font-weight: 500;
+       line-height: 1.5em;
+       margin-top: 30px;
+       
+        a{
+               text-decoration: none;
+               color: #2D487C;
+               margin-right: 20px;
+              
+               .fa-arrow-right{
+                   margin-left: 10px;
+               }
+
+               &:hover{
+                   color: #E98970;
+               }
+           }
+   }
+   }
+
+    .fn-planning-tiga {
+       width: 33%;
+       max-width: 33%;  
+       display: flex;
+       padding: 20px;
+       box-sizing: border-box;
+       height: 212px;
+       background: #f9f9f9;
+
+       .fn-images-Asurance {
+           margin-right: 20px;
+           }
+   
+       .fn-Asurance-main {
+           width: 100%;
+       }
+   
+
+   
+       .fn-Asurance-desc {
+           color: #7a7a7a;
+           font-family: "Poppins", Sans-serif;
+           font-size: 14px;
+           font-weight: 400;
+           line-height: 1.5em;
+           margin-top: 20px;
+       }
+   
+       .fn-button-Asurance {
+           font-family: "Poppins", Sans-serif;
+           font-size: 15px;
+           font-weight: 500;
+           line-height: 1.5em;
+           border: none;
+           width: 156px;
+           height: 46px;
+           background: #E98970;
+           border-radius: 5px;
+           font-family: 'Poppins',sans-serif;
+           font-style: normal;
+           font-weight: 500;
+           font-size: 16px;
+           line-height: 50px;
+           text-align: center;
+           color: #FFFFFF;
+           margin-top: 20px;
+           
+          &:hover{
+           background: #fd6039;
+           box-shadow: -6px -6px 6px rgba(242, 182, 182,0.75),
+                        6px 6px 6px rgba(242, 182, 182,0.75);
+        
+           
+          }
+       }
+   }
+
+   @media screen and (max-width:768px) {
+      & {
+          flex-direction: column;
+      }
+
+      &  .fn-planning-satu {
+       width: 100%;
+       max-width: 100%;
+       display: flex;
+       flex-direction: column;
+       padding: 20px;
+       margin-bottom: 20px;
+       height: 250px;
+       box-sizing: border-box;
+
+
+       .fn-images-palnning {
+       margin-right: 20px;
+       }
+
+       .fn-planing-main {
+         width: 100%;
+       }
+
+       .fn-financial-title {
+         margin-top: 20px;
+      
+       }
+
+       .fn-financial-desc {
+          margin-top: 25px;
+       }
+
+       .fn-financial-buton {
+          margin-top: 35px;
+
+       }
+
+      
+   }
+
+   &  .fn-planning-dua {
+       width: 100%;
+       max-width: 100%;
+       margin: 0;
+       flex-direction: column;
+       padding: 20px;
+       margin-bottom: 20px;
+       height: 250px;
+       box-sizing: border-box;
+  
+   .fn-Audit-main {
+       width: 100%;
+   }
+
+   .fn-Audit-title {
+       margin-top: 20px;
+   
+   }
+
+   .fn-Audit-desc {
+       margin-top: 25px;
+   }
+
+   .fn-Audit-buton {
+       margin-top: 35px;
+   
+           }
+   
+   }
+
+   &  .fn-planning-tiga {
+       width: 100%;
+       max-width: 100%;
+       flex-direction: column;
+       padding: 20px;
+       height: 192px;
+       box-sizing: border-box;
+       
+       .fn-Asurance-main {
+       width: 100%;
+       }
+
+       .fn-Asurance-title {
+        margin-top: 20px;
+       
+       }
+
+       .fn-Asurance-desc {
+        margin-top: 25px;
+       }
+
+       .fn-Asurance-buton {
+        margin-top: 35px;
+
+       }
+   
+       
+   }
+
+   }
+
+   
+   @media screen and (max-width:578px) {
+       & {
+           flex-direction: column;
+       }
+
+       &  .fn-planning-satu {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 20px;
+        height: 270px;
+        box-sizing: border-box;
+
+
+        .fn-images-palnning {
+        margin-right: 20px;
+        }
+
+        .fn-planing-main {
+          width: 100%;
+        }
+
+        .fn-financial-title {
+          margin-top: 20px;
+       
+        }
+
+        .fn-financial-desc {
+           margin-top: 25px;
+        }
+
+        .fn-financial-buton {
+           margin-top: 35px;
+
+        }
+
+       
+    }
+
+    &  .fn-planning-dua {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 20px;
+        height: 270px;
+        box-sizing: border-box;
+   
+    .fn-Audit-main {
+        width: 100%;
+    }
+
+    .fn-Audit-title {
+        margin-top: 20px;
+    
+    }
+
+    .fn-Audit-desc {
+        margin-top: 25px;
+    }
+
+    .fn-Audit-buton {
+        margin-top: 25px;
+    
+            }
+    
+    }
+
+    &  .fn-planning-tiga {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        padding: 20px;
+        height: 192px;
+        box-sizing: border-box;
+        
+        .fn-Asurance-main {
+        width: 100%;
+        }
+
+        .fn-Asurance-title {
+         margin-top: 20px;
+        
+        }
+
+        .fn-Asurance-desc {
+         margin-top: 25px;
+        }
+
+        .fn-Asurance-buton {
+         margin-top: 25px;
+
+        }
+    
+        
+    }
+
+    }
+}
+
+//about-main
+.fn-about-main {
+    width: 100%;
+    max-width: 100%;
+    margin-top: -250px;
+    margin-bottom: 200px;
+}
+
+.fn-services-satu {
+    width: 50%;
+    max-width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: -150px;
+
+  .fn-services-title {
+    color: #2D487C;
+    font-family: "Poppins", Sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.3em;
+  }
+
+  .divider {
+    line-height: 1.5em; 
+    
+  }
+  .fn-services-desc {
+    font-family: "Poppins", Sans-serif;  
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #333;
+    margin-top: 20px; 
+}
+
+  @media screen and (max-width:768px){
+      & {
+          width: 100%;
+          max-width: 100%;
+          margin-top: 200px;
+      }
+  }
+
+  @media screen and (max-width:578px){
+    & {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 200px;
+
+        .fn-services-desc {
+            font-family: "Poppins", Sans-serif;  
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5em;
+            color: #333;
+            margin-top: 20px; 
+        }
+
+        .fn-services-title {
+            font-size: 35px;
+            font-weight: 600;
+            line-height: 1.2em;
+          }
+        
+    }
+
+}
+
+}
+
+.fn-personal-fiance {
+    display: flex;
+    margin-bottom: 100px;
+    margin-top: -180px;
+
+
+    .fn-personal-satu {
+       width: 70%;
+       max-width: 70%;
+       margin-right:40px ;
+       
+    
+    .meeting-satu {
+       position: relative;
+        .fa-play-circle{
+            position: absolute;
+            color: #2D487C;
+            top: 120px;
+            left: 300px;
+            opacity: .9;
+          
+ 
+        }
+ 
+        .mmeting {
+            width: 100%;
+            box-shadow: 30px 30px #2D487C;
+            
+        }
+    }
+    }
+
+    .fn-personal-dua {
+        width: 40%;
+        max-width: 40%;
+        margin-left: 40px;
+        margin-top: 40px;
+        
+      
+
+        .fn-personal-title {
+            font-family: 'Poppins',sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: #2D487C;
+        }
+
+        .paragrapf {
+          width: 100%;
+            
+        .fn-personal-desc-satu {
+            font-family: 'Poppins',sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: #7A7A7A;
+            margin-top: 20px;
+        }
+
+       .fn-personal-desc-dua{
+            font-family: 'Poppins',sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: #7A7A7A;
+        }
+    }
+
+    .fn-button-personal {
+        font-family: "Poppins", Sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.5em;
+        display: block;
+        border: none;
+        width: 156px;
+        height: 46px;
+        background: #E98970;
+        border-radius: 5px;
+        font-family: 'Poppins',sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-top: 50px;
+        
+       &:hover{
+        background: #fd6039;
+        box-shadow: -6px -6px 6px rgba(242, 182, 182,0.75),
+                     6px 6px 6px rgba(242, 182, 182,0.75);
+     
+        
+       }
+    }
+
+   
+}
+@media screen and (max-width:768px) {
+    &{
+        flex-direction: column;
+    }
+    & .fn-personal-satu {
+        width: 100%;
+        max-width: 100%;
+
+        .mmeting {
+            width: 100%;
+            box-shadow: 30px 30px #2D487C;
+            
+        }
+
+    }
+
+    & .fn-personal-dua {
+        width:100%;
+        max-width:100%;
+        margin-top: 90px;
+        margin-left: 10px;
+
+        .title {
+            width:80%;
+        }
+
+        .paragrapf {
+            width: 100%;
+        }    
+
+    }
+}
+@media screen and (max-width:578px) {
+    &{
+        flex-direction: column;
+    }
+    & .fn-personal-satu {
+        width: 100%;
+        max-width: 100%;
+
+        .fa-play-circle{
+           margin-left: -90px;
+           margin-top: -30px;
+          
+ 
+        }
+
+    }
+
+    & .fn-personal-dua {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 70px;
+
+
+        .paragrapf {
+         width: 100%;
+         .fn-personal-desc-satu {
+            
+            margin-top: 30px;
+        }
+        }    
+
+    }
+}
+}
+
+
+
+
+//fn-choose
+
+.fn-choose-main {
+    display: flex;
+    margin-top: 400px;
+
+
+    
+
+    .fn-choose-satu {
+       width: 37%;
+       max-width: 37%;
+       height: 669px;
+       position: relative;
+       top: 80px;
+       
+       .fn-title-choose {
+        color: #2D487C;
+        font-family: "Poppins", Sans-serif;
+        font-size: 42px;
+        font-weight: 600;
+        line-height: 1.3em;
+       }
+
+
+       .fn-desc-satu {
+        color: #2D487C;
+        font-family: "Poppins", Sans-serif;
+        font-size: 18px;
+        font-weight: 600; 
+        margin-top: 10px; 
+        margin-left: 10px;
+       
+       }
+
+       .fa-check-circle {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        color: rgb(250, 179, 47);
+        font-size: 45px;
+       
+        
+       }
+       .fn-desc-choose {
+        color: #7A7A7A;
+        font-family: "Poppins", Sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        margin-top: 20px;
+        margin-bottom: 30px;
+       }
+    }
+
+    .fn-choose-dua {
+       width: 31%;
+       max-width: 31%;
+       background: #f9f9f9;
+       height: 276px;
+       text-align: center;
+       padding: 50px;
+       box-sizing: border-box;
+       margin: 0 2px;
+
+       .fn-acount{
+           width: 300px;
+           height: 256px;
+           margin-top: -30px;
+           margin-left: -32px;
+          
+        .fn-title-acount {
+            color: #000;
+            font-family: "Poppins", Sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.2em;
+            margin-top: 20px;
+           }
+    
+           .fn-desc-acount {
+            color: #7A7A7A;
+            font-family: "Poppins", Sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 20px; 
+           }
+       }
+    }
+
+    .fn-choose-tiga {
+       width: 31%;
+       max-width: 31%;
+       height: 276px;
+       text-align: center;
+       padding: 50px;
+       box-sizing: border-box;
+       margin: 0 10px;
+       border: 1px solid silver;
+       margin-top: -70px;
+       
+
+       .fn-quality{
+        width: 300px;
+        height: 256px;
+        margin-top: -30px;
+        margin-left: -32px;
+       
+     .fn-title-acount {
+         color: #000;
+         font-family: "Poppins", Sans-serif;
+         font-size: 16px;
+         font-weight: 600;
+         line-height: 1.2em;
+         margin-top: 20px;
+        }
+ 
+        .fn-desc-acount {
+         color: #7A7A7A;
+         font-family: "Poppins", Sans-serif;
+         font-size: 14px;
+         font-weight: 400;
+         
+         margin-top: 20px; 
+        }
+    }
+
+    }
+
+   @media screen and (max-width:768px) {
+      & {
+          flex-direction: column;
+      }
+
+      &  .fn-planning-satu {
+       width: 100%;
+       max-width: 100%;
+       display: flex;
+       flex-direction: column;
+       padding: 20px;
+       margin-bottom: 20px;
+       height: 250px;
+       box-sizing: border-box;
+
+
+       .fn-images-palnning {
+       margin-right: 20px;
+       }
+
+       .fn-planing-main {
+         width: 100%;
+       }
+
+       .fn-financial-title {
+         margin-top: 20px;
+      
+       }
+
+       .fn-financial-desc {
+          margin-top: 25px;
+       }
+
+       .fn-financial-buton {
+          margin-top: 35px;
+
+       }
+
+      
+   }
+
+   &  .fn-planning-dua {
+       width: 100%;
+       max-width: 100%;
+       margin: 0;
+       flex-direction: column;
+       padding: 20px;
+       margin-bottom: 20px;
+       height: 250px;
+       box-sizing: border-box;
+  
+   .fn-Audit-main {
+       width: 100%;
+   }
+
+   .fn-Audit-title {
+       margin-top: 20px;
+   
+   }
+
+   .fn-Audit-desc {
+       margin-top: 25px;
+   }
+
+   .fn-Audit-buton {
+       margin-top: 35px;
+   
+           }
+   
+   }
+
+   &  .fn-planning-tiga {
+       width: 100%;
+       max-width: 100%;
+       flex-direction: column;
+       padding: 20px;
+       height: 250px;
+       box-sizing: border-box;
+       
+       .fn-Asurance-main {
+       width: 100%;
+       }
+
+       .fn-Asurance-title {
+        margin-top: 20px;
+       
+       }
+
+       .fn-Asurance-desc {
+        margin-top: 25px;
+       }
+
+       .fn-Asurance-buton {
+        margin-top: 35px;
+
+       }
+   
+       
+   }
+
+   }
+
+   
+   @media screen and (max-width:578px) {
+       & {
+           flex-direction: column;
+       }
+
+       &  .fn-planning-satu {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 20px;
+        height: 270px;
+        box-sizing: border-box;
+
+
+        .fn-images-palnning {
+        margin-right: 20px;
+        }
+
+        .fn-planing-main {
+          width: 100%;
+        }
+
+        .fn-financial-title {
+          margin-top: 20px;
+       
+        }
+
+        .fn-financial-desc {
+           margin-top: 25px;
+        }
+
+        .fn-financial-buton {
+           margin-top: 35px;
+
+        }
+
+       
+    }
+
+    &  .fn-planning-dua {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 20px;
+        height: 270px;
+        box-sizing: border-box;
+   
+    .fn-Audit-main {
+        width: 100%;
+    }
+
+    .fn-Audit-title {
+        margin-top: 20px;
+    
+    }
+
+    .fn-Audit-desc {
+        margin-top: 25px;
+    }
+
+    .fn-Audit-buton {
+        margin-top: 25px;
+    
+            }
+    
+    }
+
+    &  .fn-planning-tiga {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        padding: 20px;
+        height: 270px;
+        box-sizing: border-box;
+        
+        .fn-Asurance-main {
+        width: 100%;
+        }
+
+        .fn-Asurance-title {
+         margin-top: 20px;
+        
+        }
+
+        .fn-Asurance-desc {
+         margin-top: 25px;
+        }
+
+        .fn-Asurance-buton {
+         margin-top: 25px;
+
+        }
+    
+        
+    }
+
+    }
+}
+
+.fn-chooses-main {
+    display: flex;
+    margin-top: 0px;
+    margin-top: -10px;
+    margin-top:-300px;
+
+    
+
+    .fn-choose-satu {
+       width: 37%;
+       max-width: 37%;
+       height: 669px;
+
+       .fn-title-choose {
+        color: #2D487C;
+        font-family: "Poppins", Sans-serif;
+        font-size: 42px;
+        font-weight: 600;
+        line-height: 1.3em;
+       }
+
+
+       .fn-desc-satu {
+        color: #2D487C;
+        font-family: "Poppins", Sans-serif;
+        font-size: 18px;
+        font-weight: 600; 
+        margin-top: 10px; 
+        margin-left: 10px;
+       
+       }
+
+       .fa-check-circle {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        color: rgb(250, 179, 47);
+        font-size: 45px;
+       
+        
+       }
+       .fn-desc-choose {
+        color: #7A7A7A;
+        font-family: "Poppins", Sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        margin-top: 20px;
+        margin-bottom: 30px;
+       }
+    }
+
+    .fn-choose-dua {
+       width: 31%;
+       max-width: 31%;
+       height: 276px;
+       text-align: center;
+       padding: 50px;
+       box-sizing: border-box;
+       margin: 0 2px;
+       border: 1px solid silver;
+       margin-top: -80px;
+
+       .fn-acount{
+           width: 300px;
+           height: 256px;
+           margin-top: -30px;
+           margin-left: -18px;
+          
+        .fn-title-acount {
+            color: #000;
+            font-family: "Poppins", Sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.2em;
+            margin-top: 20px;
+           }
+    
+           .fn-desc-acount {
+            color: #7A7A7A;
+            font-family: "Poppins", Sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 20px; 
+           }
+       }
+    }
+
+    .fn-choose-tiga {
+       width: 31%;
+       max-width: 31%;
+       height: 276px;
+       text-align: center;
+       padding: 50px;
+       box-sizing: border-box;
+       margin: 0 10px;
+       background: #e9e9e9;
+       margin-top: -150px;
+       
+
+       .fn-quality{
+        width: 300px;
+        height: 256px;
+        margin-top: -30px;
+        margin-left: -18px;
+       
+     .fn-title-acount {
+         color: #000;
+         font-family: "Poppins", Sans-serif;
+         font-size: 16px;
+         font-weight: 600;
+         line-height: 1.2em;
+         margin-top: 20px;
+        }
+ 
+        .fn-desc-acount {
+         color: #7A7A7A;
+         font-family: "Poppins", Sans-serif;
+         font-size: 14px;
+         font-weight: 400;
+         
+         margin-top: 20px; 
+        }
+    }
+
+    }
+
+   @media screen and (max-width:768px) {
+      & {
+          flex-direction: column;
+      }
+
+      &  .fn-planning-satu {
+       width: 100%;
+       max-width: 100%;
+       display: flex;
+       flex-direction: column;
+       padding: 20px;
+       margin-bottom: 20px;
+       height: 250px;
+       box-sizing: border-box;
+
+
+       .fn-images-palnning {
+       margin-right: 20px;
+       }
+
+       .fn-planing-main {
+         width: 100%;
+       }
+
+       .fn-financial-title {
+         margin-top: 20px;
+      
+       }
+
+       .fn-financial-desc {
+          margin-top: 25px;
+       }
+
+       .fn-financial-buton {
+          margin-top: 35px;
+
+       }
+
+      
+   }
+
+   &  .fn-planning-dua {
+       width: 100%;
+       max-width: 100%;
+       margin: 0;
+       flex-direction: column;
+       padding: 20px;
+       margin-bottom: 20px;
+       height: 250px;
+       box-sizing: border-box;
+  
+   .fn-Audit-main {
+       width: 100%;
+   }
+
+   .fn-Audit-title {
+       margin-top: 20px;
+   
+   }
+
+   .fn-Audit-desc {
+       margin-top: 25px;
+   }
+
+   .fn-Audit-buton {
+       margin-top: 35px;
+   
+           }
+   
+   }
+
+   &  .fn-planning-tiga {
+       width: 100%;
+       max-width: 100%;
+       flex-direction: column;
+       padding: 20px;
+       height: 250px;
+       box-sizing: border-box;
+       
+       .fn-Asurance-main {
+       width: 100%;
+       }
+
+       .fn-Asurance-title {
+        margin-top: 20px;
+       
+       }
+
+       .fn-Asurance-desc {
+        margin-top: 25px;
+       }
+
+       .fn-Asurance-buton {
+        margin-top: 35px;
+
+       }
+   
+       
+   }
+
+   }
+
+   
+   @media screen and (max-width:578px) {
+       & {
+           flex-direction: column;
+       }
+
+       &  .fn-planning-satu {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 20px;
+        height: 270px;
+        box-sizing: border-box;
+
+
+        .fn-images-palnning {
+        margin-right: 20px;
+        }
+
+        .fn-planing-main {
+          width: 100%;
+        }
+
+        .fn-financial-title {
+          margin-top: 20px;
+       
+        }
+
+        .fn-financial-desc {
+           margin-top: 25px;
+        }
+
+        .fn-financial-buton {
+           margin-top: 35px;
+
+        }
+
+       
+    }
+
+    &  .fn-planning-dua {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 20px;
+        height: 270px;
+        box-sizing: border-box;
+   
+    .fn-Audit-main {
+        width: 100%;
+    }
+
+    .fn-Audit-title {
+        margin-top: 20px;
+    
+    }
+
+    .fn-Audit-desc {
+        margin-top: 25px;
+    }
+
+    .fn-Audit-buton {
+        margin-top: 25px;
+    
+            }
+    
+    }
+
+    &  .fn-planning-tiga {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        padding: 20px;
+        height: 270px;
+        box-sizing: border-box;
+        
+        .fn-Asurance-main {
+        width: 100%;
+        }
+
+        .fn-Asurance-title {
+         margin-top: 20px;
+        
+        }
+
+        .fn-Asurance-desc {
+         margin-top: 25px;
+        }
+
+        .fn-Asurance-buton {
+         margin-top: 25px;
+
+        }
+    
+        
+    }
+
+    }
 }
 
