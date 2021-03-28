@@ -17,6 +17,11 @@ html, body {
   margin-right: auto;
   margin-left: auto;
 }
+.container .nav-item .dropdown {
+  z-index: 999;
+  position: relative;
+  background-color: aqua;
+}
 .container ul {
   transition: 1s;
 }
@@ -52,6 +57,10 @@ html, body {
 .container ul li .nav-link:hover {
   background-color: #E98970;
 }
+.container ul li ul .dropdown-menu {
+  z-index: 999;
+  background-color: #2D487C;
+}
 .container ul li .dropdown-item {
   width: 100%;
   height: 50px;
@@ -64,6 +73,8 @@ html, body {
   font-size: 16px;
   border-radius: 5px;
   transition: 1s;
+  z-index: 9999;
+  position: relative;
 }
 .container ul li .dropdown-item:hover {
   color: white;
@@ -1231,7 +1242,7 @@ nav {
 .fn-about-main {
   width: 100%;
   max-width: 100%;
-  margin-top: -250px;
+  margin-top: -100px;
   margin-bottom: 200px;
 }
 
@@ -1291,7 +1302,7 @@ nav {
 .fn-personal-fiance {
   display: flex;
   margin-bottom: 100px;
-  margin-top: -180px;
+  margin-top: -90px;
 }
 .fn-personal-fiance .fn-personal-satu {
   width: 70%;
@@ -1416,7 +1427,7 @@ nav {
 
 .fn-choose-main {
   display: flex;
-  margin-top: 400px;
+  margin-top: 300px;
 }
 .fn-choose-main .fn-choose-satu {
   width: 37%;
@@ -1466,6 +1477,18 @@ nav {
   padding: 50px;
   box-sizing: border-box;
   margin: 0 2px;
+  border-radius: 5px;
+  border: 1px solid silver;
+  position: relative;
+}
+.fn-choose-main .fn-choose-dua .dots-satu {
+  position: absolute;
+  top: -100px;
+  left: -70px;
+  display: inline-block;
+  z-index: -80px;
+  border: none;
+  opacity: 2;
 }
 .fn-choose-main .fn-choose-dua .fn-acount {
   width: 300px;
@@ -1498,6 +1521,7 @@ nav {
   margin: 0 10px;
   border: 1px solid silver;
   margin-top: -70px;
+  border-radius: 5px;
 }
 .fn-choose-main .fn-choose-tiga .fn-quality {
   width: 300px;
@@ -1524,144 +1548,71 @@ nav {
   .fn-choose-main {
     flex-direction: column;
   }
-  .fn-choose-main .fn-planning-satu {
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    margin-bottom: 20px;
-    height: 250px;
-    box-sizing: border-box;
-  }
-  .fn-choose-main .fn-planning-satu .fn-images-palnning {
-    margin-right: 20px;
-  }
-  .fn-choose-main .fn-planning-satu .fn-planing-main {
-    width: 100%;
-  }
-  .fn-choose-main .fn-planning-satu .fn-financial-title {
-    margin-top: 20px;
-  }
-  .fn-choose-main .fn-planning-satu .fn-financial-desc {
-    margin-top: 25px;
-  }
-  .fn-choose-main .fn-planning-satu .fn-financial-buton {
-    margin-top: 35px;
-  }
-  .fn-choose-main .fn-planning-dua {
+  .fn-choose-main .fn-choose-satu {
     width: 100%;
     max-width: 100%;
     margin: 0;
-    flex-direction: column;
-    padding: 20px;
-    margin-bottom: 20px;
-    height: 250px;
-    box-sizing: border-box;
+    margin-top: -300px;
   }
-  .fn-choose-main .fn-planning-dua .fn-Audit-main {
-    width: 100%;
-  }
-  .fn-choose-main .fn-planning-dua .fn-Audit-title {
-    margin-top: 20px;
-  }
-  .fn-choose-main .fn-planning-dua .fn-Audit-desc {
-    margin-top: 25px;
-  }
-  .fn-choose-main .fn-planning-dua .fn-Audit-buton {
-    margin-top: 35px;
-  }
-  .fn-choose-main .fn-planning-tiga {
+  .fn-choose-main .fn-choose-dua {
     width: 100%;
     max-width: 100%;
-    flex-direction: column;
-    padding: 20px;
+    padding: 50px 0;
     height: 250px;
-    box-sizing: border-box;
+    margin-top: -240px;
   }
-  .fn-choose-main .fn-planning-tiga .fn-Asurance-main {
+  .fn-choose-main .fn-choose-dua .fn-acount {
     width: 100%;
+    margin-left: 0;
+    padding: 0 15px;
   }
-  .fn-choose-main .fn-planning-tiga .fn-Asurance-title {
-    margin-top: 20px;
+  .fn-choose-main .fn-choose-tiga {
+    width: 100%;
+    margin-top: 10px;
+    max-width: 100%;
+    padding: 50px 0;
+    height: 250px;
+    margin-left: 3px;
   }
-  .fn-choose-main .fn-planning-tiga .fn-Asurance-desc {
-    margin-top: 25px;
-  }
-  .fn-choose-main .fn-planning-tiga .fn-Asurance-buton {
-    margin-top: 35px;
+  .fn-choose-main .fn-choose-tiga .fn-quality {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 15px;
   }
 }
 @media screen and (max-width: 578px) {
   .fn-choose-main {
     flex-direction: column;
   }
-  .fn-choose-main .fn-planning-satu {
+  .fn-choose-main .fn-choose-satu {
     width: 100%;
     max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    margin-bottom: 20px;
-    height: 270px;
-    box-sizing: border-box;
   }
-  .fn-choose-main .fn-planning-satu .fn-images-palnning {
-    margin-right: 20px;
-  }
-  .fn-choose-main .fn-planning-satu .fn-planing-main {
-    width: 100%;
-  }
-  .fn-choose-main .fn-planning-satu .fn-financial-title {
-    margin-top: 20px;
-  }
-  .fn-choose-main .fn-planning-satu .fn-financial-desc {
-    margin-top: 25px;
-  }
-  .fn-choose-main .fn-planning-satu .fn-financial-buton {
-    margin-top: 35px;
-  }
-  .fn-choose-main .fn-planning-dua {
+  .fn-choose-main .fn-choose-dua {
     width: 100%;
     max-width: 100%;
-    margin: 0;
-    flex-direction: column;
-    padding: 20px;
-    margin-bottom: 20px;
-    height: 270px;
-    box-sizing: border-box;
+    padding: 50px 0;
+    height: 250px;
+    margin-top: -200px;
   }
-  .fn-choose-main .fn-planning-dua .fn-Audit-main {
+  .fn-choose-main .fn-choose-dua .fn-acount {
     width: 100%;
+    margin-left: 0;
+    padding: 0 15px;
   }
-  .fn-choose-main .fn-planning-dua .fn-Audit-title {
-    margin-top: 20px;
-  }
-  .fn-choose-main .fn-planning-dua .fn-Audit-desc {
-    margin-top: 25px;
-  }
-  .fn-choose-main .fn-planning-dua .fn-Audit-buton {
-    margin-top: 25px;
-  }
-  .fn-choose-main .fn-planning-tiga {
+  .fn-choose-main .fn-choose-tiga {
     width: 100%;
+    margin-top: 30px;
     max-width: 100%;
-    flex-direction: column;
-    padding: 20px;
-    height: 270px;
-    box-sizing: border-box;
+    padding: 50px 0;
+    height: 250px;
+    margin-left: 3px;
+    margin-top: 10px;
   }
-  .fn-choose-main .fn-planning-tiga .fn-Asurance-main {
+  .fn-choose-main .fn-choose-tiga .fn-quality {
     width: 100%;
-  }
-  .fn-choose-main .fn-planning-tiga .fn-Asurance-title {
-    margin-top: 20px;
-  }
-  .fn-choose-main .fn-planning-tiga .fn-Asurance-desc {
-    margin-top: 25px;
-  }
-  .fn-choose-main .fn-planning-tiga .fn-Asurance-buton {
-    margin-top: 25px;
+    margin-left: 0;
+    padding: 0 15px;
   }
 }
 
@@ -1718,12 +1669,13 @@ nav {
   margin: 0 2px;
   border: 1px solid silver;
   margin-top: -80px;
+  border-radius: 5px;
 }
 .fn-chooses-main .fn-choose-dua .fn-acount {
   width: 300px;
   height: 256px;
   margin-top: -30px;
-  margin-left: -18px;
+  margin-left: -32px;
 }
 .fn-chooses-main .fn-choose-dua .fn-acount .fn-title-acount {
   color: #000;
@@ -1748,14 +1700,25 @@ nav {
   padding: 50px;
   box-sizing: border-box;
   margin: 0 10px;
-  background: #e9e9e9;
+  background: #f9f9f9;
   margin-top: -150px;
+  border-radius: 5px;
+  border: 1px solid silver;
+  position: relative;
+}
+.fn-chooses-main .fn-choose-tiga .dots1 {
+  position: absolute;
+  opacity: 1;
+  background-color: #333;
+  top: -90px;
+  left: 30px;
 }
 .fn-chooses-main .fn-choose-tiga .fn-quality {
   width: 300px;
   height: 256px;
   margin-top: -30px;
-  margin-left: -18px;
+  margin-left: -32px;
+  position: relative;
 }
 .fn-chooses-main .fn-choose-tiga .fn-quality .fn-title-acount {
   color: #000;
@@ -1776,144 +1739,697 @@ nav {
   .fn-chooses-main {
     flex-direction: column;
   }
-  .fn-chooses-main .fn-planning-satu {
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    margin-bottom: 20px;
-    height: 250px;
-    box-sizing: border-box;
-  }
-  .fn-chooses-main .fn-planning-satu .fn-images-palnning {
-    margin-right: 20px;
-  }
-  .fn-chooses-main .fn-planning-satu .fn-planing-main {
-    width: 100%;
-  }
-  .fn-chooses-main .fn-planning-satu .fn-financial-title {
-    margin-top: 20px;
-  }
-  .fn-chooses-main .fn-planning-satu .fn-financial-desc {
-    margin-top: 25px;
-  }
-  .fn-chooses-main .fn-planning-satu .fn-financial-buton {
-    margin-top: 35px;
-  }
-  .fn-chooses-main .fn-planning-dua {
+  .fn-chooses-main .fn-choose-satu {
     width: 100%;
     max-width: 100%;
     margin: 0;
-    flex-direction: column;
-    padding: 20px;
-    margin-bottom: 20px;
-    height: 250px;
-    box-sizing: border-box;
   }
-  .fn-chooses-main .fn-planning-dua .fn-Audit-main {
-    width: 100%;
-  }
-  .fn-chooses-main .fn-planning-dua .fn-Audit-title {
-    margin-top: 20px;
-  }
-  .fn-chooses-main .fn-planning-dua .fn-Audit-desc {
-    margin-top: 25px;
-  }
-  .fn-chooses-main .fn-planning-dua .fn-Audit-buton {
-    margin-top: 35px;
-  }
-  .fn-chooses-main .fn-planning-tiga {
+  .fn-chooses-main .fn-choose-dua {
     width: 100%;
     max-width: 100%;
-    flex-direction: column;
-    padding: 20px;
+    padding: 50px 0;
     height: 250px;
-    box-sizing: border-box;
+    margin-top: -360px;
   }
-  .fn-chooses-main .fn-planning-tiga .fn-Asurance-main {
+  .fn-chooses-main .fn-choose-dua .fn-acount {
     width: 100%;
+    margin-left: 0;
+    padding: 0 15px;
   }
-  .fn-chooses-main .fn-planning-tiga .fn-Asurance-title {
-    margin-top: 20px;
+  .fn-chooses-main .fn-choose-tiga {
+    width: 100%;
+    margin-top: 10px;
+    max-width: 100%;
+    padding: 50px 0;
+    height: 250px;
+    margin-left: 0;
   }
-  .fn-chooses-main .fn-planning-tiga .fn-Asurance-desc {
-    margin-top: 25px;
-  }
-  .fn-chooses-main .fn-planning-tiga .fn-Asurance-buton {
-    margin-top: 35px;
+  .fn-chooses-main .fn-choose-tiga .fn-quality {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 15px;
   }
 }
 @media screen and (max-width: 578px) {
   .fn-chooses-main {
     flex-direction: column;
   }
-  .fn-chooses-main .fn-planning-satu {
+  .fn-chooses-main .fn-choose-satu {
     width: 100%;
     max-width: 100%;
-    display: flex;
+  }
+  .fn-chooses-main .fn-choose-dua {
+    width: 100%;
+    max-width: 100%;
+    padding: 50px 0;
+    height: 250px;
+    margin-top: -360px;
+  }
+  .fn-chooses-main .fn-choose-dua .fn-acount {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 15px;
+  }
+  .fn-chooses-main .fn-choose-tiga {
+    width: 100%;
+    margin-top: 30px;
+    max-width: 100%;
+    padding: 50px 0;
+    height: 250px;
+    margin-left: 3px;
+    margin-top: 10px;
+  }
+  .fn-chooses-main .fn-choose-tiga .fn-quality {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 15px;
+  }
+}
+
+.fn-happy {
+  background: #E98970;
+  width: 100%;
+  height: 668px;
+}
+.fn-happy .fn-happy-main {
+  padding: 40px 0;
+  box-sizing: border-box;
+  margin-top: -350px;
+}
+.fn-happy .fn-happy-main .fn-client-satu {
+  text-align: center;
+}
+.fn-happy .fn-happy-main .fn-client-satu .fn-client-title {
+  color: #FFFFFF;
+  font-family: "Poppins", Sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.3em;
+  margin-top: 10px;
+}
+.fn-happy .fn-happy-main .fn-client-satu .divider {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.fn-happy .fn-happy-main .fn-client-container {
+  margin-top: 100px;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-dua {
+  width: 50%;
+  min-width: 50%;
+  background: #FFFFFF;
+  padding: 35px;
+  height: 322px;
+  box-sizing: border-box;
+  border-top: 4px solid #2D487C;
+  margin-right: 20px;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-dua .client-main {
+  width: 480px;
+  height: 248px;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-dua .fa-star {
+  color: #fab123;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-dua .fn-dest-client {
+  color: #7A7A7A;
+  font-family: "Poppins", Sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin-top: 30px;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-dua .image-client {
+  margin-top: 40px;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-dua .fn-image-client .team1 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-dua .fn-name {
+  margin-left: 5px;
+  margin-top: 7px;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-dua .fn-name .fn-name-satu {
+  color: #2D487C;
+  font-family: "Poppins", Sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  list-style: 1em;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-dua .fn-name .fn-name-1 {
+  color: #7A7A7A;
+  font-family: "Poppins", Sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  list-style: 1em;
+  margin-top: -20px;
+  margin-left: 3px;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-tiga {
+  width: 50%;
+  max-width: 50%;
+  background: #FFFFFF;
+  padding: 35px;
+  height: 322px;
+  box-sizing: border-box;
+  border-top: 4px solid #2D487C;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-tiga .client-main-satu {
+  width: 480px;
+  height: 248px;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-tiga .fa-star {
+  color: #fab123;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-tiga .fn-dest-client {
+  color: #7A7A7A;
+  font-family: "Poppins", Sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin-top: 30px;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-tiga .image-client-satu {
+  margin-top: 40px;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-tiga .fn-image-client-dua .team2 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-tiga .fn-name {
+  margin-left: 5px;
+  margin-top: 7px;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-tiga .fn-name .fn-name-dua {
+  color: #2D487C;
+  font-family: "Poppins", Sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  list-style: 1em;
+}
+.fn-happy .fn-happy-main .fn-client-container .fn-client-tiga .fn-name .fn-name-tiga {
+  color: #7A7A7A;
+  font-family: "Poppins", Sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  list-style: 1em;
+  margin-top: -20px;
+  margin-left: 3px;
+}
+@media screen and (max-width: 768px) {
+  .fn-happy .fn-happy-main .fn-client-container {
     flex-direction: column;
-    padding: 20px;
-    margin-bottom: 20px;
-    height: 270px;
-    box-sizing: border-box;
   }
-  .fn-chooses-main .fn-planning-satu .fn-images-palnning {
-    margin-right: 20px;
-  }
-  .fn-chooses-main .fn-planning-satu .fn-planing-main {
-    width: 100%;
-  }
-  .fn-chooses-main .fn-planning-satu .fn-financial-title {
-    margin-top: 20px;
-  }
-  .fn-chooses-main .fn-planning-satu .fn-financial-desc {
-    margin-top: 25px;
-  }
-  .fn-chooses-main .fn-planning-satu .fn-financial-buton {
-    margin-top: 35px;
-  }
-  .fn-chooses-main .fn-planning-dua {
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-dua {
     width: 100%;
     max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-dua .client-main {
+    width: 100%;
+  }
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-tiga {
+    width: 100%;
+    max-width: 100%;
+  }
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-tiga .client-main-satu {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 578px) {
+  .fn-happy .fn-happy-main .fn-client-container {
+    flex-direction: column;
+  }
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-dua {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-dua .client-main {
+    width: 100%;
+  }
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-tiga {
+    width: 100%;
+    max-width: 100%;
+  }
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-tiga .client-main-satu {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .fn-happy {
+    height: 968px;
+  }
+  .fn-happy .fn-happy-main {
+    margin-top: 140px;
+  }
+}
+
+.fn-logoipsum {
+  width: 100%;
+  height: 155px;
+  background: #F9F9F9;
+  margin-bottom: 200px;
+}
+.fn-logoipsum .container-logo {
+  display: flex;
+}
+.fn-logoipsum .fn-logoipsum-main {
+  display: flex;
+  width: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+  margin-top: -15px;
+}
+.fn-logoipsum .fn-logoipsum-main .logo-satu {
+  width: 25%;
+  max-width: 25%;
+}
+.fn-logoipsum .fn-logoipsum-main .logo-dua {
+  width: 25%;
+  max-width: 25%;
+  margin: 0 120px;
+}
+.fn-logoipsum .fn-logoipsum-main .container-logo-satu {
+  margin-left: -50px;
+}
+.fn-logoipsum .fn-logoipsum-main .logo-tiga {
+  width: 25%;
+  max-width: 25%;
+}
+.fn-logoipsum .fn-logoipsum-main .logo-empat {
+  width: 25%;
+  max-width: 25%;
+  margin: 0 120px;
+}
+@media screen and (max-width: 768px) {
+  .fn-logoipsum {
+    height: auto;
+  }
+  .fn-logoipsum .fn-logoipsum-main {
+    flex-direction: column;
+    margin-left: -20px;
+  }
+  .fn-logoipsum .fn-logoipsum-main .container-logo {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .fn-logoipsum .fn-logoipsum-main .container-logo .logo-satu {
+    margin: 0 60px;
+  }
+  .fn-logoipsum .fn-logoipsum-main .container-logo-satu {
+    margin-left: 0px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .fn-logoipsum .fn-logoipsum-main .container-logo-satu .logo-tiga {
+    margin: 0 60px;
+  }
+}
+@media screen and (max-width: 578px) {
+  .fn-logoipsum {
+    height: auto;
+  }
+  .fn-logoipsum .fn-logoipsum-main {
+    flex-direction: column;
+    margin-left: 0 px;
+    width: 100%;
+  }
+  .fn-logoipsum .fn-logoipsum-main .container-logo {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .fn-logoipsum .fn-logoipsum-main .container-logo .logo-satu {
     margin: 0;
-    flex-direction: column;
-    padding: 20px;
-    margin-bottom: 20px;
-    height: 270px;
-    box-sizing: border-box;
   }
-  .fn-chooses-main .fn-planning-dua .fn-Audit-main {
-    width: 100%;
-  }
-  .fn-chooses-main .fn-planning-dua .fn-Audit-title {
-    margin-top: 20px;
-  }
-  .fn-chooses-main .fn-planning-dua .fn-Audit-desc {
-    margin-top: 25px;
-  }
-  .fn-chooses-main .fn-planning-dua .fn-Audit-buton {
-    margin-top: 25px;
-  }
-  .fn-chooses-main .fn-planning-tiga {
+  .fn-logoipsum .fn-logoipsum-main .container-logo-satu {
+    margin-left: 0px;
     width: 100%;
     max-width: 100%;
-    flex-direction: column;
-    padding: 20px;
-    height: 270px;
-    box-sizing: border-box;
   }
-  .fn-chooses-main .fn-planning-tiga .fn-Asurance-main {
+  .fn-logoipsum .fn-logoipsum-main .container-logo-satu .logo-tiga {
+    margin: 0;
+  }
+}
+
+.fn-consulting-main {
+  background: #2D487C;
+  display: flex;
+  height: 450px;
+  margin-bottom: 200px;
+}
+.fn-consulting-main .fn-consulting-satu {
+  width: 50%;
+  max-width: 50%;
+  padding: 50px;
+}
+.fn-consulting-main .fn-consulting-satu .fn-container {
+  width: 95%;
+  margin-top: 30px;
+  margin-left: 25px;
+}
+.fn-consulting-main .fn-consulting-satu .fn-title {
+  color: #FFFFFF;
+  font-family: "Poppins", Sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.3em;
+}
+.fn-consulting-main .fn-consulting-satu .fn-desc {
+  color: #FFFFFF;
+  font-family: "Poppins", Sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin-top: 20px;
+}
+.fn-consulting-main .fn-consulting-satu .fn-button-consulting {
+  font-family: "Poppins", Sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5em;
+  display: block;
+  border: none;
+  width: 135px;
+  height: 50px;
+  background: #E98970;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 50px;
+}
+.fn-consulting-main .fn-consulting-satu .fn-button-consulting:hover {
+  background: #fd6039;
+  box-shadow: -6px -6px 6px rgba(242, 182, 182, 0.75), 6px 6px 6px rgba(242, 182, 182, 0.75);
+}
+.fn-consulting-main .fn-consulting-dua {
+  width: 50%;
+  max-width: 50%;
+  position: relative;
+  left: 5px;
+}
+.fn-consulting-main .fn-consulting-dua .bg-footer {
+  position: absolute;
+  top: -80px;
+  width: 412px;
+}
+.fn-consulting-main .fn-consulting-dua .wooman-footer {
+  position: relative;
+  top: 60px;
+  left: 40px;
+}
+@media screen and (max-width: 768px) {
+  .fn-consulting-main {
+    flex-direction: column;
+    height: 870px;
+    width: 100%;
+    margin-top: -130px;
+  }
+  .fn-consulting-main .fn-consulting-satu {
+    width: 100%;
+    max-width: 100%;
+  }
+  .fn-consulting-main .fn-consulting-satu .fn-container {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+  .fn-consulting-main .fn-consulting-satu .fn-button-consulting {
+    margin-left: 200px;
+  }
+  .fn-consulting-main .fn-consulting-dua {
+    width: 100%;
+    max-width: 100%;
+    top: 70px;
+  }
+  .fn-consulting-main .fn-consulting-dua .bg-footer {
+    position: absolute;
+    top: -70px;
+    left: 100px;
+  }
+  .fn-consulting-main .fn-consulting-dua .wooman-footer {
+    position: relative;
+    top: -60px;
+    left: 100px;
+    width: 412px;
+  }
+}
+@media screen and (max-width: 578px) {
+  .fn-consulting-main {
+    flex-direction: column;
+    height: 800px;
+    margin-top: -130px;
+  }
+  .fn-consulting-main .fn-consulting-satu {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-left: 5px;
+  }
+  .fn-consulting-main .fn-consulting-satu .fn-container {
+    width: 95%;
+    max-width: 95%;
+    text-align: center;
+    margin-left: 0;
+  }
+  .fn-consulting-main .fn-consulting-satu .fn-button-consulting {
+    margin-left: 150px;
+  }
+  .fn-consulting-main .fn-consulting-dua {
+    width: 100%;
+    max-width: 100%;
+    left: 0px;
+    top: 150px;
+  }
+  .fn-consulting-main .fn-consulting-dua .container-satu {
+    width: 100%;
+    left: 20px;
+  }
+  .fn-consulting-main .fn-consulting-dua .bg-footer {
+    position: absolute;
+    top: -70px;
+    width: 355px;
+    left: 50px;
+  }
+  .fn-consulting-main .fn-consulting-dua .wooman-footer {
+    position: relative;
+    top: -60px;
+    left: 60px;
+    width: 300px;
+  }
+}
+
+.footer {
+  background: #F9F9F9;
+  height: 400px;
+}
+.footer .garis-biru {
+  background: #2D487C;
+  height: 5px;
+  margin-top: 12px;
+}
+.footer .root-satu {
+  width: 50%;
+  max-width: 50%;
+}
+.footer .root-desc {
+  color: #7A7A7A;
+  font-family: "Poppins", Sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+.footer .root-dua {
+  width: 50%;
+  max-width: 50%;
+}
+.footer .root-dua .root-desc {
+  margin-left: 470px;
+  color: #7A7A7A;
+  font-family: "Poppins", Sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+.footer .fn-footer-main {
+  display: flex;
+}
+.footer .fn-footer-main .fn-footer-satu {
+  width: 30%;
+  max-width: 30%;
+  margin-top: 100px;
+}
+.footer .fn-footer-main .fn-footer-satu .fn-desc-footer {
+  margin-top: 20px;
+  color: #7A7A7A;
+  font-family: "Poppins", Sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.footer .fn-footer-main .fn-footer-dua {
+  width: 20%;
+  max-width: 20%;
+  margin-top: 100px;
+}
+.footer .fn-footer-main .fn-footer-dua .desc-title-satu {
+  color: #2D487C;
+  font-family: "Poppins", Sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 50px;
+}
+.footer .fn-footer-main .fn-footer-dua .fn-item-footer .link-footer {
+  list-style: none;
+}
+.footer .fn-footer-main .fn-footer-dua .fn-item-footer a {
+  text-decoration: none;
+  color: #7A7A7A;
+  font-family: "Poppins", Sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.footer .fn-footer-main .fn-footer-dua .fn-item-footer a:hover {
+  color: #E98970;
+}
+.footer .fn-footer-main .fn-footer-tiga {
+  width: 20%;
+  max-width: 20%;
+  margin-top: 100px;
+}
+.footer .fn-footer-main .fn-footer-tiga .desc-title-tiga {
+  color: #2D487C;
+  font-family: "Poppins", Sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 50px;
+}
+.footer .fn-footer-main .fn-footer-tiga .fn-item-footer1 .link-footer {
+  list-style: none;
+}
+.footer .fn-footer-main .fn-footer-tiga .fn-item-footer1 a {
+  text-decoration: none;
+  color: #7A7A7A;
+  font-family: "Poppins", Sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.footer .fn-footer-main .fn-footer-tiga .fn-item-footer1 a:hover {
+  color: #E98970;
+}
+.footer .fn-footer-main .fn-footer-empat {
+  width: 25%;
+  max-width: 25%;
+  margin-top: 100px;
+}
+.footer .fn-footer-main .fn-footer-empat .desc-title-empat {
+  color: #2D487C;
+  font-family: "Poppins", Sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+.footer .fn-footer-main .fn-footer-empat .fn-item-footer2 .link-footer {
+  list-style: none;
+}
+.footer .fn-footer-main .fn-footer-empat .fn-item-footer2 a {
+  text-decoration: none;
+  color: #7A7A7A;
+  font-family: "Poppins", Sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.footer .fn-footer-main .fn-footer-empat .fn-item-footer2 a:hover {
+  color: #E98970;
+}
+.footer .fn-footer-main .fn-footer-empat .fn-button-footer {
+  font-family: "Poppins", Sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5em;
+  display: block;
+  border: none;
+  width: 135px;
+  height: 50px;
+  background: #E98970;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.footer .fn-footer-main .fn-footer-empat .fn-button-footer:hover {
+  background: #fd6039;
+  box-shadow: -6px -6px 6px rgba(242, 182, 182, 0.75), 6px 6px 6px rgba(242, 182, 182, 0.75);
+}
+@media screen and (max-width: 768px) {
+  .footer .fn-footer-main {
+    flex-direction: column;
+  }
+  .footer .fn-footer-main .fn-footer-satu {
+    width: 100%;
+    max-width: 100%;
+  }
+  .footer .fn-footer-main .fn-footer-satu .fn-desc-footer {
+    margin-left: 10px;
+  }
+  .footer .fn-footer-main .fn-footer-satu .container-satu {
     width: 100%;
   }
-  .fn-chooses-main .fn-planning-tiga .fn-Asurance-title {
+  .footer .fn-footer-main .fn-footer-satu .container-satu .footer-img {
+    margin-left: 10px;
+    margin-top: -20px;
+  }
+  .footer .fn-footer-main .fn-footer-dua {
+    width: 100%;
+    max-width: 100%;
+    margin-left: -40px;
     margin-top: 20px;
+    margin-left: -40px;
   }
-  .fn-chooses-main .fn-planning-tiga .fn-Asurance-desc {
-    margin-top: 25px;
+  .footer .fn-footer-main .fn-footer-tiga {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-left: -40px;
   }
-  .fn-chooses-main .fn-planning-tiga .fn-Asurance-buton {
-    margin-top: 25px;
+  .footer .fn-footer-main .fn-footer-empat {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-left: -40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    height: auto;
+  }
+  .footer .Root {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer .Root .root-satu {
+    width: 100%;
+    max-width: 100%;
+  }
+  .footer .Root .root-dua {
+    width: 100%;
+    max-width: 100%;
+  }
+  .footer .Root .root-dua .root-desc {
+    margin-left: 0;
   }
 }
 
