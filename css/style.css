@@ -108,6 +108,11 @@ html, body {
     background-color: #E98970;
   }
 }
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 900px;
+  }
+}
 @media screen and (max-width: 768px) {
   .container {
     max-width: 700px;
@@ -121,7 +126,7 @@ html, body {
 
 nav {
   background: white;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .navbar-toggler {
@@ -318,6 +323,10 @@ nav {
   position: relative;
   top: 60px;
   margin-bottom: 300px;
+  transition: 8s;
+}
+.fn-service-main .animate__fadeInLeft {
+  transition: 5s;
 }
 .fn-service-main .fn-service-satu {
   max-width: 30%;
@@ -1301,12 +1310,24 @@ nav {
 
 .fn-personal .bg {
   position: absolute;
-  left: 856px;
+  left: 860px;
   margin-top: -350px;
+}
+@media screen and (max-width: 992px) {
+  .fn-personal .bg {
+    left: 450px;
+    margin-top: 0;
+  }
 }
 @media screen and (max-width: 768px) {
   .fn-personal .bg {
-    left: 184px;
+    left: 114px;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .fn-personal .bg {
+    left: -10px;
     margin-top: 0;
   }
 }
@@ -1493,6 +1514,7 @@ nav {
   border-radius: 5px;
   border: 1px solid silver;
   position: relative;
+  z-index: 99999;
 }
 .fn-choose-main .fn-choose-dua .dost-satu {
   position: absolute;
@@ -1953,6 +1975,32 @@ nav {
   margin-top: -20px;
   margin-left: 3px;
 }
+@media (max-width: 992px) {
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-dua {
+    width: 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-dua .client-main {
+    width: 100%;
+  }
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-dua .fn-dest-client {
+    font-size: 16px;
+  }
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-tiga {
+    width: 50%;
+    max-width: 50%;
+  }
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-tiga .client-main-satu {
+    width: 100%;
+  }
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-tiga .image-client-satu {
+    margin-top: 15px;
+  }
+  .fn-happy .fn-happy-main .fn-client-container .fn-client-tiga .fn-dest-client {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 768px) {
   .fn-happy .fn-happy-main .fn-client-container {
     flex-direction: column;
@@ -2039,6 +2087,28 @@ nav {
   max-width: 25%;
   margin: 0 120px;
 }
+@media screen and (max-width: 992px) {
+  .fn-logoipsum {
+    height: auto;
+  }
+  .fn-logoipsum .fn-logoipsum-main {
+    flex-direction: column;
+    margin-left: 100px;
+  }
+  .fn-logoipsum .fn-logoipsum-main .container-logo {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .fn-logoipsum .fn-logoipsum-main .container-logo-satu {
+    margin-left: 0px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .fn-logoipsum .fn-logoipsum-main .container-logo-satu .logo-tiga {
+    margin: 0px;
+  }
+}
 @media screen and (max-width: 768px) {
   .fn-logoipsum {
     height: auto;
@@ -2121,6 +2191,7 @@ nav {
   font-weight: 400;
   line-height: 1.3em;
   margin-top: 20px;
+  position: relative;
 }
 .fn-consulting-main .fn-consulting-satu .fn-button-consulting {
   font-family: "Poppins", Sans-serif;
