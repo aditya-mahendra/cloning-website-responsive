@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
      <link rel="stylesheet" href="css/style.css">
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,56 +18,79 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light container p-3 fixed-top">
-        <div class="container-fluid">
-         <img src="assets/img/finansi.png" alt="" width="100">
-          <button class="navbar-toggler text-white " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon "></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0 m-auto pl-5 ">
-              <li class="nav-item " >
-                <a class="fn-item-active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="fn-item " href="#">About Us</a>
-              </li>
-              <li class="nav-item dropdown ">
-                <a class="fn-item  dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Services
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item " href="#">Services</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Service Detail</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="fn-item " href="#">Contact Us</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="fn-item  dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 More
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Career</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Pricing</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">FAQ</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Team</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">404</a></li>
-                </ul>
-              </li>
-            </ul>
-            <div class="d-flex">
-              <button class="btn text-white" type="submit">Contact Us<i class="fa fa-paper-plane ml-4"></i></button>
-            </div>
-          </div>
+     <header>
+        <div class="container">
+         <!--navbar-->
+         <div class="fn-nav">
+            <input type="checkbox" name="" id="check">
+            <img src="assets/img/finansi.png" alt="" width="130" class="logo1"> 
+         <div class="nav-btn">
+             <div class="nav-links">
+                 <ul>
+                     <li class="nav-link"  style="--i: .85s">
+                         <a href="#" class="item">Home</a>
+                     </li>
+                     <li class="nav-link" style="--i: .85s" >
+                        <a href="#">About Us</a>
+                    </li>
+                     <li class="nav-link" style="--i: .85s">
+                         <a href="#">Services<i class="fa fa-caret-down"></i></a>
+                         <div class="dropdown">
+                             <ul>
+                                 <li class="dropdown-link">
+                                     <a href="#">Service</a>
+                                 </li>
+                                 <li class="dropdown-link">
+                                     <a href="#">Service Detail</a>
+                                 </li>
+                                 <div class="arrow"></div>
+                             </ul>
+                         </div>
+                     </li>
+                     <li class="nav-link"  style="--i: .85s">
+                        <a href="#">Contact Us</a>
+                    </li>
+                     <li class="nav-link" style="--i: 1.1s">
+                         <a href="#">More<i class="fa fa-caret-down"></i></a>
+                         <div class="dropdown">
+                             <ul>
+                                 <li class="dropdown-link">
+                                     <a href="#">Career</a>
+                                 </li>
+                                 <li class="dropdown-link">
+                                     <a href="#">Pricing</a>
+                                 </li>
+                                 <li class="dropdown-link">
+                                     <a href="#">FAQ</a>
+                                     
+                                 </li>
+                                 <li class="dropdown-link">
+                                     <a href="#">Team</a>
+                                 </li>
+                                 <li class="dropdown-link">
+                                    <a href="#">404</a>
+                                </li>
+                                 <div class="arrow"></div>
+                             </ul>
+                         </div>
+                     </li>
+                 </ul>
+             </div>
+
+             <div class="log-sign" style="--i: 1.8s">
+                 <a href="#" class="btn transparent">Contact us <i class="fa fa-paper-plane"></i></a>
+             </div>
+         </div>
+
+         <div class="hamburger-menu-container">
+             <div class="hamburger-menu">
+                 <div></div>
+             </div>
+         </div>
+      </div>
+      <!--navbar-->
         </div>
-      </nav>
+   </header>
 
 
       <!--nav-header-->
@@ -242,7 +264,7 @@
      <div class="fn-personal-fiance">
        <div class="fn-personal-satu">
        <div class="meeting-satu">
-        <a href="#"><i class="fa fa-5x fa-play-circle animate__animated animate__fadeInLeft fixed-top"></i><img src="assets/img/meeting.jpg" alt="meeting" class="mmeting animate__animated animate__fadeInLeft"></a>
+        <a href="#"><i class="fa fa-5x fa-play-circle"></i><img src="assets/img/meeting.jpg" alt="meeting" class="mmeting animate__animated animate__fadeInLeft"></a>
        </div>
        </div>
        <div class="fn-personal-dua animate__animated animate__fadeInRight">
@@ -270,16 +292,16 @@
                <div class="fn-desc">
                 <p class="fn-desc-choose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                </div>
-              <div class="desc-satu d-flex">
+              <div class="desc-satu">
                  <i class="fa fa-3x fa-check-circle"></i>
                 <p class="fn-desc-satu">Quality Commitment</p>
               </div>
-              <div class="desc-satu d-flex">
+              <div class="desc-satu">
                 <i class="fa fa-3x fa-check-circle"></i>
                <p class="fn-desc-satu">
                 Creative Teams</p>
              </div>
-              <div class="desc-satu d-flex">
+              <div class="desc-satu">
                 <i class="fa fa-3x fa-check-circle"></i>
               <p class="fn-desc-satu">
                 Honest & Dependable</p>
@@ -338,10 +360,10 @@
           <h1 class="fn-client-title">Our Happy Clients</h1>
           <img src="assets/img/divider-1.png" alt="divider" class="divider">
         </div>
-      <div class="fn-client-container d-flex">
+      <div class="fn-client-container">
         <div class="fn-client-dua animate__animated animate__fadeInLeft">
               <div class="client-main">
-                <div class="star d-flex">
+                <div class="star">
                   <i class="fa fa-2x fa-star"></i>
                   <i class="fa fa-2x fa-star"></i>
                   <i class="fa fa-2x fa-star"></i>
@@ -351,7 +373,7 @@
                <div class="desc-client">
                   <p class="fn-dest-client">Lorem ipsum dolor sit amet, consect adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Solorem ipsum dolan samet. Samata amet hona luctus dolor ipsum.</p>
               </div>
-              <div class="image-client d-flex">
+              <div class="image-client ">
                 <div class="fn-image-client">
                   <img src="assets/img/team-1.png" alt="team" class="team1">
                  </div>
@@ -374,7 +396,7 @@
           <div class="desc-client">
             <p class="fn-dest-client">Lorem ipsum dolor sit amet, consect adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Solorem ipsum dolan samet. Samata amet hona luctus dolor ipsum.</p>
           </div>
-         <div class="image-client-satu d-flex">
+         <div class="image-client-satu">
            <div class="fn-image-client-dua">
             <img src="assets/img/team-2.png" alt="team" class="team2">
            </div>
@@ -393,7 +415,7 @@
 <section class="fn-logoipsum">
   <div class="container">
     <div class="fn-logoipsum-main">
-     <div class="container-logo d-flex">
+     <div class="container-logo ">
       <div class="logo-satu">
         <img src="assets/img/logo-lorem.png" alt="logo-satu">
       </div>
@@ -401,7 +423,7 @@
         <img src="assets/img/logo-lorem1.png" alt="logo-dua">
       </div>
      </div>
-     <div class="container-logo-satu d-flex">
+     <div class="container-logo-satu">
       <div class="logo-tiga">
         <img src="assets/img/logo-lorem2.png" alt="logo-tiga">
       </div>
@@ -421,7 +443,7 @@
        <div class="fn-container ">
         <h2 class="fn-title animate__animated animate__fadeInUp">Get Your Free Consulting</h2>
         <p class="fn-desc animate__animated animate__fadeInUp fixed-top">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-        <button class="fn-button-consulting">Let's Talk </button>
+        <button class="fn-button-consulting animate__animated animate__fadeInUp">Let's Talk </button>
        </div>
       </div>
       <div class="fn-consulting-dua">
@@ -472,8 +494,8 @@
          </ul>
        </div>
      </div>
-     <hr>
-     <div class="Root d-flex">
+     <hr class="garis">
+     <div class="Root">
         <div class="root-satu">
           <p class="root-desc">Finansi Design By Rootlayers</p>
         </div>
@@ -491,7 +513,7 @@
 
 
 
-
+    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
